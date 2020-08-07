@@ -4,9 +4,9 @@
 import os
 import unittest
 
-from views import app, db
-from _config import basedir
-from models import User
+from project import app, db
+from project._config import basedir
+from project.models import Task, User
 
 TEST_DB = 'test.db'
 
@@ -76,7 +76,8 @@ class UsersTests(unittest.TestCase):
     def test_form_is_present_on_login_page(self):
         response = self.app.get('/')
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b'Please sign in to access your task list', response.data)
+        #self.assertIn(b'Please sign in to access your task list.', response.data)
+        self.assertIn(b'Please login to access your task list.', response.data)
 
     def test_users_cannot_login_unless_registered(self):
         response = self.login('foo', 'bar')

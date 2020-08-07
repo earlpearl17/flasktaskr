@@ -4,7 +4,6 @@
 ### Flask ###
 *.db
 my_venv/
-my_venv3.6/
 *.pyc
 __pycache__
 *.DS_Store
