@@ -2,11 +2,12 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=flask
 
 ### Flask ###
+*.log
 *.db
-my_venv/
 *.pyc
 __pycache__
 *.DS_Store
+my_venv/
 project/_config.py
 requirements_*.txt
 project/.coverage
