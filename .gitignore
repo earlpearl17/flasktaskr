@@ -8,7 +8,5 @@
 __pycache__
 *.DS_Store
 my_venv/
-project/_config.py
-requirements_*.txt
 project/.coverage
 project/htmlcov/
