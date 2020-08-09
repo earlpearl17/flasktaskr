@@ -1,12 +1,13 @@
 import os
 
-#DEBUG = True
-DEBUG = False
+DEBUG = True
+#DEBUG = False
 
 # grab the folder where this script lives
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 DATABASE = 'flasktaskr.db'
+#DATABASE = 'test.db'
 #USERNAME = 'admin'
 #PASSWORD = 'admin'
 #WTF_CSRF_ENABLED = True

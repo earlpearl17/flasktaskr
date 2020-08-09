@@ -6,5 +6,5 @@
 *.pyc
 __pycache__
 my_venv/
-project/.coverage
+.coverage
 project/htmlcov/
