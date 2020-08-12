@@ -5,10 +5,11 @@ import datetime
 from functools import wraps
 from flask import flash, redirect, render_template, \
     request, session, url_for, Blueprint
+#from sqlalchemy import or_
 
 from .forms import AddTaskForm
 from project import db
-from project.models import Task
+from project.models import Task, User
 
 
 ################
@@ -37,11 +38,9 @@ def open_tasks():
     return db.session.query(Task).filter_by(
         status='1').order_by(Task.due_date.asc())
 
-
 def closed_tasks():
     return db.session.query(Task).filter_by(
         status='0').order_by(Task.due_date.asc())
-
 
 ################
 #### routes ####
@@ -55,7 +54,8 @@ def tasks():
         form=AddTaskForm(request.form),
         open_tasks=open_tasks(),
         closed_tasks=closed_tasks(),
-        username=session['name']
+        username=session['name'],
+        userrole=session['role']
     )
 
 
