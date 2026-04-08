@@ -8,3 +8,4 @@ __pycache__
 my_venv/
 .coverage
 project/htmlcov/
+ft_venv/
