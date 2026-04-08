@@ -9,3 +9,4 @@ my_venv/
 .coverage
 project/htmlcov/
 ft_venv/
+run-local.py
