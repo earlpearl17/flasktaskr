@@ -10,3 +10,5 @@ my_venv/
 project/htmlcov/
 ft_venv/
 run-local.py
+requirements-windows.txt
+requirements-oci-u22-arm.txt
